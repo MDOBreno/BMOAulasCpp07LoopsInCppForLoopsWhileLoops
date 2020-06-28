@@ -13,11 +13,11 @@ int main(int argc, const char * argv[]) {
     
     std::cout << "====================== FOR ======================\n";
     
-        for (int i=0; i<5; i++) {
+    for (int i=0; i<5; i++) {
         std::cout << "Hello, World!\n";
     }
     
-    std::cout << "----------------\n";
+    std::cout << "--------------------\n" ;
     
     int i=0;
     for (; i<5; ) {
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
         i++;
     }
     
-    std::cout << "----------------\n";
+    std::cout << "--------------------\n" ;
     
     /*int*/ i=0;
     bool condicao = true;
@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
         }
     }
     
-    std::cout << "----------------\n";
+    std::cout << "--------------------\n" ;
     
     /*int*/ i=0;
     for (; ; ) {
@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
         i++;
     } while (i<5);
     
-    std::cout << "----------------\n";
+    std::cout << "--------------------\n" ;
     
     /*int*/ i=0;
     /*bool*/ condicao = true;
@@ -75,6 +75,44 @@ int main(int argc, const char * argv[]) {
             condicao = false; //Equivale a: break;
         }
     }
+    
+    std::cout << "==================== CONTINUE ====================\n";
+    
+    for (int i=0; i<5; i++) {
+        std::cout << "Hello, World!\n";
+        continue;           //Não faz diferença, pois ja esta no final do loop
+    }
+    
+    std::cout << "--------------------\n" ;
+    
+    for (int i=0; i<5; i++) {
+        if (i%2 == 0) {     //Se 'i' for par então:
+            continue;       //não imprima "Hello, World!\n"
+        }
+        std::cout << "i=" << i << " " << "Hello, World!\n";
+    }
+    
+    std::cout << "====================== BREAK =====================\n";
+    
+    for (int i=0; i<5; i++) {
+        if (i%2 == 1) {     //Se 'i' for par então:
+            break;          //encerre o loop, e todas as suas interacoes futuras
+        }
+        std::cout << "i=" << i << " " << "Hello, World!\n";
+    }
+    
+    std::cout << "===================== RETURN =====================\n";
+    
+    for (int i=0; i<5; i++) {
+        if (i%2 == 1) {     //Se 'i' for par então:
+            return 0;       //encerre o loop, e todas as suas interacoes futuras
+        }
+        std::cout << "i=" << i << " " << "Hello, World!\n";
+    }
+    std::cout << "RETURN Hello, World!\n"; //Nunca sera impresso, pois a return encerrara o programa antes
+    
+    
+    
     
     return 0;
 }
