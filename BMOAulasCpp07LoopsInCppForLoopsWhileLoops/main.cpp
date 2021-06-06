@@ -95,7 +95,7 @@ int main(int argc, const char * argv[]) {
     std::cout << "====================== BREAK =====================\n";
     
     for (int i=0; i<5; i++) {
-        if (i%2 == 1) {     //Se 'i' for par então:
+        if (i%2 == 1) {     //Se 'i' for impar então:
             break;          //encerre o loop, e todas as suas interacoes futuras
         }
         std::cout << "i=" << i << " " << "Hello, World!\n";
@@ -104,8 +104,8 @@ int main(int argc, const char * argv[]) {
     std::cout << "===================== RETURN =====================\n";
     
     for (int i=0; i<5; i++) {
-        if (i%2 == 1) {     //Se 'i' for par então:
-            return 0;       //encerre o loop, e todas as suas interacoes futuras
+        if (i%2 == 1) {     //Se 'i' for impar então:
+            return 0;       //encerre o loop, todas as suas interacoes futuras, e tambem o metodo/funcao atual
         }
         std::cout << "i=" << i << " " << "Hello, World!\n";
     }
